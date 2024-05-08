@@ -1,0 +1,7 @@
+poncho: https://www.macinasac.com/products/poncho-packable-waterproof-cape-khaki?glCountry=GB&gad_source=1#fo_c=407&fo_k=506c46eecf07d7fccbbb3782b7f9bd2e&fo_s=gplauk
+raincoat: https://www.regatta.com/mens-pack-it-iii-waterproof-jacket-black/?gad_source=1
+puffer_jacket: https://www.ingatestonesaddlery.co.uk/wp-content/uploads/2023/06/Mens-Puffer-Jacket-jpg.webp
+umberella: https://wjla.com/resources/media/a3975200-94dd-474b-8e59-a9798b53ccef-large1x1_AP19330854744224.jpg?1581439597248
+plastic_bag: https://cdn.backpacker.com/wp-content/uploads/2014/07/rain-hood.jpg?width=730
+basket_icon: <a href="https://www.flaticon.com/free-icons/shopping-basket" title="shopping basket icons">Shopping basket icons created by Freepik - Flaticon</a>
+rain_background: https://www.freepik.com/free-vector/mountain-landscape-with-rain-vector-cartoon-illustration-high-rocks-peaks-with-cliffs-ledge_17995529.htm

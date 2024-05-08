@@ -1,0 +1,233 @@
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-top: 70px; /* Added to avoid overlap with the fixed header */
+    min-height: 100%;  /* Ensure the body takes at least the full height of the viewport */
+    margin: 0;  /* Remove default margin */
+    padding: 0;  /* Remove default padding */
+    background: transparent;  /* Make the body background transparent */
+}
+/* Set a background image for all pages */
+html {
+    background: url('rain_background2.jpg') no-repeat center center fixed;
+    background-size: cover;  /* Cover the entire page */
+    height: 100%;  /* Ensure the html element covers the full height */
+}
+
+
+.welcome-text {
+    font-size: 1.25rem;
+    color: #555;
+    text-align: center;
+    width: 100%;
+}
+.shop-name a {
+    background: url('logo.PNG');
+    display: block; 
+    width: 485px; 
+    height: 150px; 
+    margin: 0 auto; 
+}
+
+/* Control elements like basket and sort */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sort, .basket-icon-container {
+    margin-left: 20px; /* Adds spacing between controls */
+}
+
+.sort-dropdown, .basket-icon {
+    cursor: pointer;
+}
+
+.basket-icon {
+    background: url('basket_icon.png') no-repeat center center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+/* Styles for displaying products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; /* Added margin to compensate for fixed header */
+}
+
+/* Individual product card styles */
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1.25rem;
+    margin: 0.625rem;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensures text alignment within the card */
+}
+
+.checkout-button button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;  /* Adds some space between the list of items and the button */
+}
+
+.checkout-button button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Container for centering the content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem; /* Updated to relative units */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem; /* Updated font size */
+    font-family: 'Arial', sans-serif;
+    margin: 1rem 0;
+    text-align: center; /* Center-align the title */
+}
+
+
+
+
+/* Ensure the header layout accommodates the new logo size */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Adjust background as necessary */
+    position: relative; /* Changed from fixed if overlapping issues occur */
+}
+
+.welcome-text {
+    margin-right: auto; /* pushes the text to the left */
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/*.shop-name {
+    background: url('logo.PNG');
+    margin: 0 auto;
+    text-align: center;
+    width: 480px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+
+
+.sort, .basket-icon-container {
+    margin: 10px;
+}
+
+/* Styles for the dropdown and the basket icon */
+
+
+
+
+
+/* Image styles */
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Text styles within product cards */
+.product h2, .product p {
+    margin-top: 0.625rem;
+    margin-bottom: 0.3125rem;
+}
+
+.product a {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.625rem;
+    transition: background-color 0.3s ease;
+    outline: none; /* focus management */
+}
+
+.product a:hover, .product a:focus {
+    background-color: #0056b3;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 600px) {
+    .product, .container {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+/* General styles for basket items */
+.basket-item img {
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.item-content {
+    background-color: #fff; /* Background color for the text container */
+    padding: 10px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for 3D effect */
+    margin-top: 10px; /* Space between image and text container */
+}
+
+.welcome-text, .shop-name {
+    text-align: center; /* Centers the header text */
+    margin-top: 10px; /* Spacing for aesthetics */
+}
+
+.container {
+    padding: 20px; /* Padding for the container */
+    text-align: center; /* Center alignment of all content */
+}
+
+.basket-items ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    padding: 0; /* Removes padding from the list */
+}
+
+.basket-items li {
+    margin-bottom: 20px; /* Space between items */
+    display: flex; /* Aligns image and text side by side */
+    align-items: center; /* Vertically center aligns the content */
+    justify-content: start; /* Aligns content from the start */
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our wide selection of products. Sort by name, price, or environmental impact.">
+    <title>Ernie's Rain Solutions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="shop-name"><a href="{{ url_for('front_page') }}"></a></h1>
+        <div class="controls">
+        </div>
+    </header>
+    <div class="container">
+        <h1>Shopping Basket</h1>
+        <div class="basket-items">
+            {% if basket %}
+                <ul>
+                    {% for item in basket %}
+                        <li class="basket-item">
+                            <img src="{{ url_for('static', filename='images/' + item['image']) }}" alt="{{ item['name'] }}">
+                            <div class="item-content">
+                                <h2>{{ item['name'] }}</h2>
+                                <p>{{ item['description'] }}</p>
+                                <p>Price: ${{ item['price'] }}</p>
+                                <!-- Button to remove item from basket -->
+                                <button onclick="window.location.href='{{ url_for('remove_from_basket', product_id=item['id']) }}'">Remove from Basket</button>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    <li class="item-content">Total Price: ${{ total_price }}</li>
+                    <div class="checkout-button">
+                        <button onclick="window.location.href='{{ url_for('checkout') }}'">Proceed to Checkout</button>
+                    </div>
+                </ul>
+            {% else %}
+                <p>Your basket is empty.</p>
+            {% endif %}
+        </div>
+        <a href="{{ url_for('front_page') }}">Back to Shop</a>
+    </div>
+</body>
+</html>
